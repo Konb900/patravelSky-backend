@@ -1,0 +1,11 @@
+package java.com.pingan.Service;
+
+import java.com.pingan.Model;
+import java.util.List;
+
+/**
+ * Created by XieJia@pingan.com.cn
+ */
+public class ApplyService { 
+
+}

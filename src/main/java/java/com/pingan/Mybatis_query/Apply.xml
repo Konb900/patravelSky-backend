@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="java.com.pingan.DAO.ApplyDao">
+       <resultMap id="applyShort" type="ApplyShort">
+              <result column="apply_id" property="apply_id"/>
+              <result column="user_account" property="apply_user"/>
+              <result column="trip_reason" property="trip_reason"/>
+              <result column="apply_state" property="apply_state"/>
+       </resultMap>
+       <resultMap id="budgetBean" type="BudgetBean">
+              <result column="apply_id" property="apply_id"/>
+              <result column="budget_info" property="budget_info"/>
+              <result column="budget_class" property="budget_class"/>
+              <result column="budget_price" property="budget_price"/>
+              <result column="budget_num" property="budget_num"/>
+
+       </resultMap>
+       <insert id="insertApply" parameterType="Apply"   keyProperty="id">
+              insert into apply(apply_id,user_id,user_account,user_department,user_apply_time,trip_destination,
+              trip_time_begin,trip_time_end,trip_reason,trip_phonecall,manager_comment,high_manager_comment,apply_state)
+              values(#{apply_id},#{user_id},#{user_account},#{user_department},#{user_apply_time},#{trip_destination},#{trip_time_begin},
+              #{trip_time_end},#{trip_reason},#{trip_phonecall},"","",#{apply_state},"",0)
+       </insert>
+       <insert id="insertBudget" parameterType="BudgetBean" keyProperty="id">
+              insert into budget(apply_id,budget_info,budget_class,budget_price,budget_num)
+              values(#{apply_id},#{budget_info},#{budget_class},#{budget_price},#{budget_num})
+       </insert>
+       <select id="selectApplyShortByuserId" parameterType="String" resultMap="applyShort">
+              select apply_id,user_account,trip_reason,apply_state from apply where user_id=#{user_id};
+       </select>
+       <select id="selectApplyByapply_id" parameterType="String" resultType="Apply">
+              select apply_id,user_id,user_apply_time,user_account,user_department,trip_destination,trip_time_begin,
+              trip_time_end,trip_reason,trip_phonecall,apply_state from apply where apply_id=#{apply_id};
+       </select>
+       <select id="selectAllBudgetByApplyId" parameterType="String" resultMap="budgetBean">
+              select apply_id,budget_info,budget_class,budget_price,budget_num from budget where apply_id=#{apply_Id}
+       </select>
+       <update id="updateApplyInfo" parameterType="Apply">
+              update apply set user_apply_time=#{user_apply_time},user_account=#{user_account},
+              user_department=#{user_department},trip_destination=#{trip_destination},trip_time_begin=#{trip_time_begin},
+              trip_time_end=#{trip_time_end},trip_reason=#{trip_reason},trip_phonecall=#{trip_phonecall} where apply_id=#{apply_id}
+       </update>
+       <update id="updateBudget" parameterType="BudgetBean">
+              update budget set apply_id=#{apply_id},budget_info=#{budget_info},budget_class=#{budget_class},
+              budget_price=#{budget_price},budget_num=#{budget_num} where apply_id=#{apply_id};
+       </update>
+       <delete id="deleteBudgetByApplyId" parameterType="String">
+              delete from budget where apply_id=#{apply_id}
+       </delete>
+       <update id="updateApplyMoney" parameterType="Float">
+              update apply set budget_money=#{money} where apply_id=#{apply_id}
+       </update>
+       <select id="getApplyMoney" parameterType="String" resultType="Float">
+              select budget_money from apply where apply_id=#{apply_id}
+       </select>
+       <select id="getApplyStateByApplyId" parameterType="String" resultType="String">
+              select apply_state from apply where apply_id=#{apply_id}
+       </select>
+       <select id="getApplyRes" parameterType="String" resultType="String">
+              select apply_res from apply where apply_id=#{apply_Id}
+       </select>
+       <select id="selectAllApplyShortByDepartment" parameterType="String" resultMap="applyShort">
+              select apply_id,user_account,trip_reason,apply_state from apply where user_department=#{department} and apply_state="待审核"
+       </select>
+       <update id="updateApplyState" parameterType="String" >
+              update apply set apply_state=#{apply_state} where apply_id=#{apply_id}
+       </update>
+</mapper>

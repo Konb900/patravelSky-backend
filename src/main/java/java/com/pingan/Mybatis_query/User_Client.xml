@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="java.com.pingan.DAO.UserDao">
+
+       <select id="selectUserClientById" parameterType="string"  resultType="UserClient">
+           select * from user_client where user_id = #{user_id}
+       </select>
+        <select id="selectUserClientByAccount" parameterType="string"  resultType="UserClient">
+            select * from user_client where user_account = #{user_account}
+        </select>
+    <select id="selectUserClientIdByAccount" parameterType="string"  resultType="String">
+        select user_id from user_client where user_accounst = #{user_account}
+    </select>
+    <select id="selectManager" parameterType="String" resultType="UserClient">
+        select * from user_client where user_role="manager" and user_department=#{department}
+    </select>
+    <select id="selectEmployee" parameterType="String" resultType="UserClient">
+        select * from user_client where user_role="employee" and user_department=#{department}
+    </select>
+    <update id="updateUserFaceUrl" parameterType="String" >
+        update user_client set user_face_url=#{user_face_url} where user_id=#{user_id}
+    </update>
+    <update id="updateUserProfile" parameterType="String">
+        update profile set description=#{description},phone=#{phone} where user_account=#{user_account}
+    </update>
+    <select id="getUserProfile" parameterType="String" resultType="Profile">
+        select * from profile where user_account=#{user_account}
+    </select>
+    <update id="updateUserPassword" parameterType="String">
+        update user_client set user_password=#{password_new} where user_id=#{user_id}
+    </update>
+</mapper>
