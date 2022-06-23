@@ -23,4 +23,7 @@ public class Apply {
     public String getTrip_phonecall() {
     }
 
+    public String getUser_id() {
+    }
+
 }

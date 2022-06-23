@@ -12,4 +12,7 @@ import java.com.pingan.Model.Profile;
 @Repository
 public class UserDao { 
 
+    public List<UserClient> selectManager(String department) {
+    }
+
 }

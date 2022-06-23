@@ -8,4 +8,7 @@ import java.util.List;
  */
 public class ApplyService { 
 
+    public int insertBudget(BudgetBean budgetBean) {
+    }
+
 }

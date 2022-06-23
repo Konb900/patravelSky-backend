@@ -17,4 +17,8 @@ public class UserServiceImpl {
     public UserDao userDao;
     public WeiboDao weiboDao;
 
+    @Override
+    public List<UserClient> selectManager(String department) {
+    }
+
 }

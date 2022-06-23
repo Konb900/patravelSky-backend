@@ -13,4 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ApplyDao { 
 
+    public String getApplyStateByApplyId(String apply_id) {
+    }
+
 }

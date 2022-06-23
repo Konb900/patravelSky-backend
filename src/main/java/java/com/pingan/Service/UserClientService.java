@@ -9,4 +9,7 @@ import java.com.pingan.Model.UserClient;
  */
 public class UserClientService { 
 
+    public List<UserClient> selectEmployee(String department) {
+    }
+
 }

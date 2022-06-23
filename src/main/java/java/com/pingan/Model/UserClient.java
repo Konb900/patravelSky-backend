@@ -14,4 +14,7 @@ public class UserClient {
     public String user_email;
     public String user_id;
 
+    public void setUser_department(String user_department) {
+    }
+
 }

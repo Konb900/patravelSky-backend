@@ -19,4 +19,8 @@ public class ApplyServiceImpl {
     public NotificationDao notificationDao;
     public ApplyDao applyDao;
 
+    @Override
+    public int caculateApplyBudget(List<Budget> list) {
+    }
+
 }

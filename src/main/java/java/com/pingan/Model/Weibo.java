@@ -14,4 +14,7 @@ public class Weibo {
     public String weibo_id;
     public Integer thumb_on;
 
+    public Integer getThumb_on() {
+    }
+
 }

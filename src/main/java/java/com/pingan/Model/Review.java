@@ -12,4 +12,7 @@ public class Review {
     public String user_account;
     public String apply_id;
 
+    public void setComment_date(Date comment_date) {
+    }
+
 }

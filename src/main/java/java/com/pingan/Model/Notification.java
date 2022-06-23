@@ -14,4 +14,7 @@ public class Notification {
     public String from_who;
     public String read_state;
 
+    public Notification(String user_id, String user_account, Date noti_date, String msg, String read_state, String apply_id, String from_who) {
+    }
+
 }

@@ -13,4 +13,7 @@ public class Comment {
     public String user_face_url;
     public Date comment_date;
 
+    public Date getComment_date() {
+    }
+
 }

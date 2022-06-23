@@ -11,4 +11,7 @@ public class BudgetBean {
     public String apply_id;
     public java budget_num;
 
+    public void setBudget_class(String budget_class) {
+    }
+
 }
