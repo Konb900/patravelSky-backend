@@ -10,4 +10,7 @@ public class ApplyShort {
     public String apply_user;
     public String apply_state;
 
+    public String getApply_user() {
+    }
+
 }

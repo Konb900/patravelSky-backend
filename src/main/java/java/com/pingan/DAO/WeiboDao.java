@@ -13,4 +13,7 @@ import java.com.pingan.Model.Weibo;
 @Repository
 public class WeiboDao { 
 
+    public int updateCommentFaceUrl(String user_account, String user_face_url) {
+    }
+
 }

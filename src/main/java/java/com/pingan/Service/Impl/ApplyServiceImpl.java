@@ -23,4 +23,8 @@ public class ApplyServiceImpl {
     public int caculateApplyBudget(List<Budget> list) {
     }
 
+    @Override
+    public int updateApplyState(String applyState, String apply_id) {
+    }
+
 }

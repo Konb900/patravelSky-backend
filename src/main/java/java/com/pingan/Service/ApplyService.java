@@ -11,4 +11,7 @@ public class ApplyService {
     public int insertBudget(BudgetBean budgetBean) {
     }
 
+    public List<ApplyShort> selectAllApplyShortByUserDepartment(String department) {
+    }
+
 }

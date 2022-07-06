@@ -16,4 +16,7 @@ public class ApplyDao {
     public String getApplyStateByApplyId(String apply_id) {
     }
 
+    public int deleteBudgetByApplyId(String apply_id) {
+    }
+
 }

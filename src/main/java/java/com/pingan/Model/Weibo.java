@@ -17,4 +17,7 @@ public class Weibo {
     public Integer getThumb_on() {
     }
 
+    public void setWeibo_content(String weibo_content) {
+    }
+
 }

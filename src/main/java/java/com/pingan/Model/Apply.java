@@ -26,4 +26,10 @@ public class Apply {
     public String getUser_id() {
     }
 
+    public void setUser_department(String user_department) {
+    }
+
+    public float getBudget_money() {
+    }
+
 }
