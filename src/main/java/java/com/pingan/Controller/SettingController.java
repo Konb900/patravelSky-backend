@@ -22,4 +22,9 @@ import javax.annotation.Resource;
 public class SettingController { 
     public UserClientService userService;
 
+    @RequestMapping(value = "/profile")
+    public ModelAndView index_profile(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+    }
+
 }

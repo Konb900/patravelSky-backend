@@ -12,4 +12,7 @@ public class UserClientService {
     public List<UserClient> selectEmployee(String department) {
     }
 
+    public int saveUserProfile(String user_account, String description, String phone) {
+    }
+
 }

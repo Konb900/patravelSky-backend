@@ -14,4 +14,7 @@ public class BudgetBean {
     public void setBudget_class(String budget_class) {
     }
 
+    public float getBudget_price() {
+    }
+
 }

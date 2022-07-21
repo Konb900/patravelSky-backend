@@ -30,4 +30,12 @@ public class MyTripController {
     public ApplyService applyService;
     public UserClientService userService;
 
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    @ResponseBody
+    public String MyTripNew(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Date time_begin = null,time_end = null;
+        String user_name = request.getParameter("user_name");
+        String user_department = request.getParameter("user_department");
+    }
+
 }

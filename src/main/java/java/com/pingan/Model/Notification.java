@@ -21,4 +21,7 @@ public class Notification {
     public void setUser_id(String user_id) {
     }
 
+    public void setApply_id(String apply_id) {
+    }
+
 }

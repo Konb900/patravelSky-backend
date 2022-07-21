@@ -17,4 +17,8 @@ import java.util.Map;
 public class WeiboServiceImpl { 
     public WeiboDao weiboDao;
 
+    @Override
+    public Weibo selectWeiboById(String weibo_id) {
+    }
+
 }

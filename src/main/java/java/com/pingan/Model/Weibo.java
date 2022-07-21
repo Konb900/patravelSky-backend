@@ -20,4 +20,7 @@ public class Weibo {
     public void setWeibo_content(String weibo_content) {
     }
 
+    public String getWeibo_id() {
+    }
+
 }

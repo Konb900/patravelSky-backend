@@ -16,4 +16,7 @@ public class Comment {
     public Date getComment_date() {
     }
 
+    public void setComment_id(String comment_id) {
+    }
+
 }

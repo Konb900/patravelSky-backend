@@ -32,4 +32,7 @@ public class Apply {
     public float getBudget_money() {
     }
 
+    public void setTrip_phonecall(String trip_phonecall) {
+    }
+
 }

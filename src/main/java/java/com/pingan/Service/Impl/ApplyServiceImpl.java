@@ -21,10 +21,15 @@ public class ApplyServiceImpl {
 
     @Override
     public int caculateApplyBudget(List<Budget> list) {
+        float totle_budget = 0;
     }
 
     @Override
     public int updateApplyState(String applyState, String apply_id) {
+    }
+
+    @Override
+    public List<ApplyShort> selectAllApplyShortByuserId(String user_id) {
     }
 
 }

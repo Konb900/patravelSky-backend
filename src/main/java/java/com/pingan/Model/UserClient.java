@@ -20,4 +20,7 @@ public class UserClient {
     public void setUser_id(String user_id) {
     }
 
+    public String getUser_id() {
+    }
+
 }

@@ -15,4 +15,7 @@ public class UserDao {
     public List<UserClient> selectManager(String department) {
     }
 
+    public int updateUserFaceUrl(String user_id, String user_face_url) {
+    }
+
 }

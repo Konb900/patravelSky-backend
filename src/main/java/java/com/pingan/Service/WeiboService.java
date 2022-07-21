@@ -9,4 +9,7 @@ import java.util.List;
  */
 public class WeiboService { 
 
+    public List<Comment> selectAllCommentsByWeiboId(String id) {
+    }
+
 }

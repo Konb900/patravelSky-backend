@@ -15,4 +15,7 @@ public class Review {
     public void setComment_date(Date comment_date) {
     }
 
+    public void setApply_id(String apply_id) {
+    }
+
 }

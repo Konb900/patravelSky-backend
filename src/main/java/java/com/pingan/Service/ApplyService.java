@@ -14,4 +14,7 @@ public class ApplyService {
     public List<ApplyShort> selectAllApplyShortByUserDepartment(String department) {
     }
 
+    public int updateApplyState(String applyState, String apply_id) {
+    }
+
 }

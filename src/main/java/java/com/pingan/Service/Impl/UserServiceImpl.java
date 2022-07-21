@@ -21,4 +21,8 @@ public class UserServiceImpl {
     public List<UserClient> selectManager(String department) {
     }
 
+    @Override
+    public List<UserClient> selectEmployee(String department) {
+    }
+
 }

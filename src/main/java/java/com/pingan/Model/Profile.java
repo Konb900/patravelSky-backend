@@ -9,4 +9,7 @@ public class Profile {
     public String description;
     public String user_account;
 
+    public String getUser_account() {
+    }
+
 }
