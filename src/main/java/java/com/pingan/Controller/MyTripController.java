@@ -36,6 +36,7 @@ public class MyTripController {
         Date time_begin = null,time_end = null;
         String user_name = request.getParameter("user_name");
         String user_department = request.getParameter("user_department");
+        String user_apply_time = request.getParameter("user_apply_time");
     }
 
 }

@@ -32,4 +32,8 @@ public class ApplyServiceImpl {
     public List<ApplyShort> selectAllApplyShortByuserId(String user_id) {
     }
 
+    @Override
+    public int insertBudgets(List<Budget> list) {
+    }
+
 }

@@ -17,4 +17,7 @@ public class ApplyService {
     public int updateApplyState(String applyState, String apply_id) {
     }
 
+    public int insertApplyInfo(Apply apply) {
+    }
+
 }

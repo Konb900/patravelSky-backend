@@ -13,4 +13,7 @@ public class ApplyShort {
     public String getApply_user() {
     }
 
+    public String getTrip_reason() {
+    }
+
 }

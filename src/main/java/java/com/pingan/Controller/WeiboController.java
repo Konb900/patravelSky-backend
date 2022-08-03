@@ -30,4 +30,11 @@ public class WeiboController {
     public WeiboService weiboService;
     public UserClientService userService;
 
+    @RequestMapping("/publish")
+    @ResponseBody
+    public String weiboPublish(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+    }
+
 }

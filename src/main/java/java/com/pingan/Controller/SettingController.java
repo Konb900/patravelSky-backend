@@ -25,6 +25,7 @@ public class SettingController {
     @RequestMapping(value = "/profile")
     public ModelAndView index_profile(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ModelAndView mv = new ModelAndView();
+        HttpSession session = request.getSession();
     }
 
 }

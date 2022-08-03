@@ -19,4 +19,7 @@ public class ApplyDao {
     public int deleteBudgetByApplyId(String apply_id) {
     }
 
+    public int updateApplyInfo(Apply apply) {
+    }
+
 }

@@ -16,4 +16,7 @@ public class WeiboDao {
     public int updateCommentFaceUrl(String user_account, String user_face_url) {
     }
 
+    public int weiboPublish(Weibo weibo) {
+    }
+
 }

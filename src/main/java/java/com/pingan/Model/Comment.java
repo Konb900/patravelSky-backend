@@ -19,4 +19,7 @@ public class Comment {
     public void setComment_id(String comment_id) {
     }
 
+    public void setComment(String comment) {
+    }
+
 }

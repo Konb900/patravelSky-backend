@@ -23,4 +23,7 @@ public class UserClient {
     public String getUser_id() {
     }
 
+    public void setUser_face_url(String user_face_url) {
+    }
+
 }

@@ -35,4 +35,7 @@ public class Apply {
     public void setTrip_phonecall(String trip_phonecall) {
     }
 
+    public Date getTrip_time_end() {
+    }
+
 }
