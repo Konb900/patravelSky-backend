@@ -18,4 +18,7 @@ public class Review {
     public void setApply_id(String apply_id) {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

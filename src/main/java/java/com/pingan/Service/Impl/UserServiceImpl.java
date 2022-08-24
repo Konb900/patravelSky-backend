@@ -25,4 +25,8 @@ public class UserServiceImpl {
     public List<UserClient> selectEmployee(String department) {
     }
 
+    @Override
+    public int updateUserPassword(String password_new, String user_id) {
+    }
+
 }

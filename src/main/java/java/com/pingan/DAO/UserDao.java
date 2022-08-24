@@ -18,4 +18,7 @@ public class UserDao {
     public int updateUserFaceUrl(String user_id, String user_face_url) {
     }
 
+    public int updateUserProfile(String user_account, String description, String phone) {
+    }
+
 }

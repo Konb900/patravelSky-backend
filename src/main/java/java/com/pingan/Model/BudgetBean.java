@@ -17,4 +17,7 @@ public class BudgetBean {
     public float getBudget_price() {
     }
 
+    public void setBudget_num(int budget_num) {
+    }
+
 }

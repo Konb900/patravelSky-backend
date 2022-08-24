@@ -38,4 +38,10 @@ public class Apply {
     public Date getTrip_time_end() {
     }
 
+    public void setTrip_time_begin(Date trip_time_begin) {
+    }
+
+    public void setTrip_reason(String trip_reason) {
+    }
+
 }

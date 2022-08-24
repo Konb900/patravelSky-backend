@@ -15,4 +15,7 @@ public class UserClientService {
     public int saveUserProfile(String user_account, String description, String phone) {
     }
 
+    public UserClient selectUserById(String user_id) {
+    }
+
 }

@@ -26,4 +26,7 @@ public class UserClient {
     public void setUser_face_url(String user_face_url) {
     }
 
+    public void setUser_score(int user_score) {
+    }
+
 }

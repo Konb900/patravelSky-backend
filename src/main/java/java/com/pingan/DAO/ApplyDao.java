@@ -22,4 +22,7 @@ public class ApplyDao {
     public int updateApplyInfo(Apply apply) {
     }
 
+    public List<ApplyShort> selectApplyShortByuserId(String user_id) {
+    }
+
 }
