@@ -30,4 +30,10 @@ public class ReviewController {
     private ReviewService reviewService;
     private UserClientService userService;
 
+    @RequestMapping
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        HttpSession session = request.getSession();
+    }
+
 }

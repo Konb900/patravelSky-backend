@@ -26,4 +26,7 @@ public class Weibo {
     public void setWeibo_id(String weibo_id) {
     }
 
+    public String getUser_face_url() {
+    }
+
 }

@@ -17,6 +17,7 @@ public class IDworker {
     static final private long sequenceBits = 10L;
 
     public IDworker(long workerId) {
+        super();
     }
 
 }

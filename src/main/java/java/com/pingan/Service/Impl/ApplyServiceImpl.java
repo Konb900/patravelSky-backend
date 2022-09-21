@@ -22,6 +22,7 @@ public class ApplyServiceImpl {
     @Override
     public int caculateApplyBudget(List<Budget> list) {
         float totle_budget = 0;
+        String apply_id;
     }
 
     @Override
@@ -34,6 +35,10 @@ public class ApplyServiceImpl {
 
     @Override
     public int insertBudgets(List<Budget> list) {
+    }
+
+    @Override
+    public List<ApplyShort> selectAllApplyShortByUserDepartment(String department) {
     }
 
 }

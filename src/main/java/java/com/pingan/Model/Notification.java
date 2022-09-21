@@ -28,4 +28,7 @@ public class Notification {
     public void setFrom(String from) {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

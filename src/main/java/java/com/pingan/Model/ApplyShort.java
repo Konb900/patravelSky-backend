@@ -16,4 +16,7 @@ public class ApplyShort {
     public String getTrip_reason() {
     }
 
+    public void setTrip_reason(String trip_reason) {
+    }
+
 }

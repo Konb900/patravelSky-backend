@@ -20,4 +20,7 @@ public class ApplyService {
     public int insertApplyInfo(Apply apply) {
     }
 
+    public int caculateApplyBudget(List<Budget> list) {
+    }
+
 }

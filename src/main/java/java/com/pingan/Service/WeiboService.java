@@ -12,4 +12,7 @@ public class WeiboService {
     public List<Comment> selectAllCommentsByWeiboId(String id) {
     }
 
+    public int weiboPublish(Weibo weibo) {
+    }
+
 }
