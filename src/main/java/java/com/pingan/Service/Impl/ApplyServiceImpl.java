@@ -41,4 +41,8 @@ public class ApplyServiceImpl {
     public List<ApplyShort> selectAllApplyShortByUserDepartment(String department) {
     }
 
+    @Override
+    public float getApplyBudgetMoney(String apply_id) {
+    }
+
 }

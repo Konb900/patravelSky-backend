@@ -27,4 +27,7 @@ public class Comment {
         This.weibo_id = weibo_id;
     }
 
+    public void setComment_date(Date comment_date) {
+    }
+
 }

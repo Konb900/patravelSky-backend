@@ -20,4 +20,7 @@ public class BudgetBean {
     public void setBudget_num(int budget_num) {
     }
 
+    public String getApply_id() {
+    }
+
 }

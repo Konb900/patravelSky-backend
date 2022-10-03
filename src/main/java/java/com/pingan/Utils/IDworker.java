@@ -20,4 +20,8 @@ public class IDworker {
         super();
     }
 
+    private long tilNextMillis(long lastTimestamp) {
+        long timestamp = This.timeGen();
+    }
+
 }

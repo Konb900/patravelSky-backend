@@ -29,4 +29,8 @@ public class UserServiceImpl {
     public int updateUserPassword(String password_new, String user_id) {
     }
 
+    @Override
+    public Profile getUserProfile(String user_account) {
+    }
+
 }

@@ -25,4 +25,7 @@ public class ApplyDao {
     public List<ApplyShort> selectApplyShortByuserId(String user_id) {
     }
 
+    public int updateBudget(BudgetBean budgetBean) {
+    }
+
 }

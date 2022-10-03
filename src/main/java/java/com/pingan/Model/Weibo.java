@@ -29,4 +29,7 @@ public class Weibo {
     public String getUser_face_url() {
     }
 
+    public void setUser_department(String user_department) {
+    }
+
 }

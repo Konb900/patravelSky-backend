@@ -35,6 +35,7 @@ public class WeiboController {
     public String weiboPublish(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
+        String content = request.getParameter("weibo_content");
     }
 
 }

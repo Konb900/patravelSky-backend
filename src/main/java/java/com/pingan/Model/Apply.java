@@ -47,4 +47,7 @@ public class Apply {
     public String getApply_id() {
     }
 
+    public void setTrip_time_end(Date trip_time_end) {
+    }
+
 }

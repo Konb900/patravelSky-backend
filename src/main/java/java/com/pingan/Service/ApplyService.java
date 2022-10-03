@@ -23,4 +23,7 @@ public class ApplyService {
     public int caculateApplyBudget(List<Budget> list) {
     }
 
+    public Apply selectApplyByapplyId(String apply_id) {
+    }
+
 }

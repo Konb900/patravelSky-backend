@@ -21,4 +21,7 @@ public class Review {
     public void setUser_account(String user_account) {
     }
 
+    public void setUser_behavior(String user_behavior) {
+    }
+
 }

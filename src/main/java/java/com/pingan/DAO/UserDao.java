@@ -21,4 +21,7 @@ public class UserDao {
     public int updateUserProfile(String user_account, String description, String phone) {
     }
 
+    public int updateUserPassword(String user_id, String password_new) {
+    }
+
 }

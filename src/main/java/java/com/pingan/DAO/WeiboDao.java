@@ -19,4 +19,7 @@ public class WeiboDao {
     public int weiboPublish(Weibo weibo) {
     }
 
+    public List<Weibo> selectAllWeiboByDepartment(String department) {
+    }
+
 }

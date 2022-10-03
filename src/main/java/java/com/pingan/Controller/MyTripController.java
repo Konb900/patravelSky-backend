@@ -39,6 +39,15 @@ public class MyTripController {
         String user_apply_time = request.getParameter("user_apply_time");
         String trip_destination = request.getParameter("trip_destination");
         String trip_time_begin = new DateTransform();
+        String trip_time_end = new DateTransform();
+    }
+
+    @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
+    @ResponseBody
+    public String addBudget(List<Budget> budgets) throws IOException {
+        String apply_id;
+        String budget_info;
+        String budget_class;
     }
 
 }

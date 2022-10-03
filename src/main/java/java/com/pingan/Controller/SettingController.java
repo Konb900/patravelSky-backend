@@ -26,6 +26,14 @@ public class SettingController {
     public ModelAndView index_profile(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ModelAndView mv = new ModelAndView();
         HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+    }
+
+    @RequestMapping(value = "/password")
+    public ModelAndView index_password(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView mv = new ModelAndView();
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
     }
 
 }

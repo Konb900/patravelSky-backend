@@ -31,4 +31,7 @@ public class Notification {
     public void setUser_account(String user_account) {
     }
 
+    public String getRead_state() {
+    }
+
 }

@@ -18,4 +18,7 @@ public class UserClientService {
     public UserClient selectUserById(String user_id) {
     }
 
+    public UserClient selectUserByAccount(String user_account) {
+    }
+
 }

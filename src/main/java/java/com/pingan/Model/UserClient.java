@@ -29,4 +29,7 @@ public class UserClient {
     public void setUser_score(int user_score) {
     }
 
+    public String getUser_email() {
+    }
+
 }
