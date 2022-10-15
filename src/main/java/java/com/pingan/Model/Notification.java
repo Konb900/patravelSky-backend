@@ -17,6 +17,7 @@ public class Notification {
     public Notification(String user_id, String user_account, Date noti_date, String msg, String read_state, String apply_id, String from_who) {
         This.user_id = user_id;
         This.user_account = user_account;
+        This.noti_date = noti_date;
     }
 
     public void setUser_id(String user_id) {

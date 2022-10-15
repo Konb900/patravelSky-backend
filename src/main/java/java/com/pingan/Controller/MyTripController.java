@@ -40,6 +40,7 @@ public class MyTripController {
         String trip_destination = request.getParameter("trip_destination");
         String trip_time_begin = new DateTransform();
         String trip_time_end = new DateTransform();
+        String trip_reason = request.getParameter("trip_reason");
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -48,6 +49,7 @@ public class MyTripController {
         String apply_id;
         String budget_info;
         String budget_class;
+        float budget_price;
     }
 
 }

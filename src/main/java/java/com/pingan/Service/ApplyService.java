@@ -26,4 +26,7 @@ public class ApplyService {
     public Apply selectApplyByapplyId(String apply_id) {
     }
 
+    public int sendApplyNotification(UserClient userClient, String apply_id) {
+    }
+
 }

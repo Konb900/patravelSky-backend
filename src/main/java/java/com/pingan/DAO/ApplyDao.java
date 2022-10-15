@@ -28,4 +28,7 @@ public class ApplyDao {
     public int updateBudget(BudgetBean budgetBean) {
     }
 
+    public int updateApplyState(String applyState, String apply_id) {
+    }
+
 }

@@ -45,4 +45,8 @@ public class ApplyServiceImpl {
     public float getApplyBudgetMoney(String apply_id) {
     }
 
+    @Override
+    public int insertApplyInfo(Apply apply) {
+    }
+
 }

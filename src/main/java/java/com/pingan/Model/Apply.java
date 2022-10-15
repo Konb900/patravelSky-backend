@@ -50,4 +50,10 @@ public class Apply {
     public void setTrip_time_end(Date trip_time_end) {
     }
 
+    public String getApply_res() {
+    }
+
+    public String getApply_state() {
+    }
+
 }

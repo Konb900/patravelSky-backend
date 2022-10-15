@@ -32,4 +32,7 @@ public class UserClient {
     public String getUser_email() {
     }
 
+    public void setUser_email(String user_email) {
+    }
+
 }

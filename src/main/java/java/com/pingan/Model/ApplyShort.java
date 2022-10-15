@@ -19,4 +19,7 @@ public class ApplyShort {
     public void setTrip_reason(String trip_reason) {
     }
 
+    public String getApply_id() {
+    }
+
 }
