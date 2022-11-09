@@ -23,4 +23,7 @@ public class BudgetBean {
     public String getApply_id() {
     }
 
+    public String getBudget_class() {
+    }
+
 }

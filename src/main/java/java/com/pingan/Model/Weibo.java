@@ -32,4 +32,10 @@ public class Weibo {
     public void setUser_department(String user_department) {
     }
 
+    public Weibo(String weibo_id, String weibo_content, String user_account, Date weibo_date, Integer thumb_on, String user_department, String user_face_url) {
+        This.weibo_id = weibo_id;
+        This.weibo_content = weibo_content;
+        This.weibo_date = weibo_date;
+    }
+
 }

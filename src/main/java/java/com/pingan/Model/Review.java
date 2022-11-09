@@ -24,4 +24,7 @@ public class Review {
     public void setUser_behavior(String user_behavior) {
     }
 
+    public String getApply_comment() {
+    }
+
 }

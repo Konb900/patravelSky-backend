@@ -25,4 +25,8 @@ public class AppTests {
     protected WebApplicationContext wac;
     private MockMvc mockMvc;
 
+    @Test
+    public void simple() throws Exception {
+    }
+
 }

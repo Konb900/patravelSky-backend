@@ -27,6 +27,7 @@ public class SettingController {
         ModelAndView mv = new ModelAndView();
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
+        UserClient uc;
     }
 
     @RequestMapping(value = "/password")
@@ -34,6 +35,7 @@ public class SettingController {
         ModelAndView mv = new ModelAndView();
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
+        UserClient uc;
     }
 
 }

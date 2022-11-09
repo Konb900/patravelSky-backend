@@ -21,4 +21,7 @@ public class UserClientService {
     public UserClient selectUserByAccount(String user_account) {
     }
 
+    public String selectUserIdByAccount(String user_account) {
+    }
+
 }

@@ -25,4 +25,11 @@ public class ProfileController {
     private UserClientService service;
     private WeiboService weiboService;
 
+    @RequestMapping
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        HttpSession httpSession = request.getSession();
+        String user_id = (String) httpSession.getAttribute("user_id");
+    }
+
 }

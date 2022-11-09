@@ -24,6 +24,11 @@ public class WeiboServiceImpl {
     @Override
     public int weiboThumbOn(String weibo_id, int num) {
         Map<String, Object> map = new HashMap<String, Object>();
+        map.put("weibo_id", weibo_id);
+    }
+
+    @Override
+    public int commentPublish(Comment commnet) {
     }
 
 }

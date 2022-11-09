@@ -15,4 +15,7 @@ public class Profile {
     public void setPhone(String phone) {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

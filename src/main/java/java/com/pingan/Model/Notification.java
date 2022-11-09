@@ -35,4 +35,7 @@ public class Notification {
     public String getRead_state() {
     }
 
+    public String getApply_id() {
+    }
+
 }

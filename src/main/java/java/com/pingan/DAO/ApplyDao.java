@@ -31,4 +31,7 @@ public class ApplyDao {
     public int updateApplyState(String applyState, String apply_id) {
     }
 
+    public int insertApply(Apply apply) {
+    }
+
 }

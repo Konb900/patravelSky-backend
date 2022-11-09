@@ -23,4 +23,7 @@ public class MainTest {
     static private SqlSessionFactory sqlSessionFactory;
     public static UserClientService userService;
 
+    public static SqlSessionFactory getSession() {
+    }
+
 }

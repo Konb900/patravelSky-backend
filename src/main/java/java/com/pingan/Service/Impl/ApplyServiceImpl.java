@@ -23,6 +23,13 @@ public class ApplyServiceImpl {
     public int caculateApplyBudget(List<Budget> list) {
         float totle_budget = 0;
         String apply_id;
+        for (list : Budget budget){
+            float budget_price;
+            int budget_num;
+            budget_price = Float.parseFloat(budget.budget_price);
+            budget_num = Integer.parseInt(budget.budget_num);
+            totle_budget += budget_price * budget_num;
+        }
     }
 
     @Override
@@ -47,6 +54,10 @@ public class ApplyServiceImpl {
 
     @Override
     public int insertApplyInfo(Apply apply) {
+    }
+
+    @Override
+    public int insertBudget(BudgetBean budgetBean) {
     }
 
 }

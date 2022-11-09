@@ -15,4 +15,7 @@ public class WeiboService {
     public int weiboPublish(Weibo weibo) {
     }
 
+    public List<Weibo> selectAllWeiboByDepartment(String department) {
+    }
+
 }

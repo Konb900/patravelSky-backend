@@ -56,4 +56,7 @@ public class Apply {
     public String getApply_state() {
     }
 
+    public String getTrip_reason() {
+    }
+
 }

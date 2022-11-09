@@ -33,4 +33,8 @@ public class UserServiceImpl {
     public Profile getUserProfile(String user_account) {
     }
 
+    @Override
+    public UserClient selectUserById(String user_id) {
+    }
+
 }

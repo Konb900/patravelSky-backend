@@ -22,4 +22,7 @@ public class WeiboDao {
     public List<Weibo> selectAllWeiboByDepartment(String department) {
     }
 
+    public List<Comment> selectAllCommentByWeiboId(String weibo_id) {
+    }
+
 }

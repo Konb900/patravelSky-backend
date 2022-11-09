@@ -24,4 +24,7 @@ public class UserDao {
     public int updateUserPassword(String user_id, String password_new) {
     }
 
+    public List<UserClient> selectEmployee(String department) {
+    }
+
 }

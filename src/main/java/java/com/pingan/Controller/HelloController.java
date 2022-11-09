@@ -19,4 +19,11 @@ import java.com.pingan.Service.UserClientService;
 public class HelloController { 
     public UserClientService userService;
 
+    @RequestMapping(value = "/user_query", method = RequestMethod.POST)
+    @ResponseBody
+    public String login_query(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String user_account = request.getParameter("user_account");
+        String user_password = request.getParameter("user_password");
+    }
+
 }

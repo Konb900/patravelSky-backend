@@ -36,6 +36,14 @@ public class WeiboController {
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
         String content = request.getParameter("weibo_content");
+        String date = new DateTransform();
+    }
+
+    @RequestMapping(value = "/thumbOn", method = RequestMethod.POST)
+    @ResponseBody
+    public String weiboThumbOn(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String weibo_id = request.getParameter("weibo_id");
+        int num = Integer.parseInt(request.getParameter("num"));
     }
 
 }

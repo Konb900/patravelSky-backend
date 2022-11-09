@@ -35,4 +35,7 @@ public class UserClient {
     public void setUser_email(String user_email) {
     }
 
+    public String getUser_department() {
+    }
+
 }

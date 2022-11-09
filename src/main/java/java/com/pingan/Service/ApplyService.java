@@ -29,4 +29,7 @@ public class ApplyService {
     public int sendApplyNotification(UserClient userClient, String apply_id) {
     }
 
+    public int insertBudgets(List<Budget> list) {
+    }
+
 }

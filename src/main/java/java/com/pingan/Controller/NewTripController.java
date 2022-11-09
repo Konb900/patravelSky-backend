@@ -20,4 +20,11 @@ import java.com.pingan.Service.ApplyService;
 public class NewTripController { 
     public ApplyService applyService;
 
+    @RequestMapping(value = "/{apply_id}")
+    public ModelAndView getUpdateApply(String apply_id) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        Apply apply = applyService.selectApplyByapplyId(apply_id);
+        List<BudgetBean> budgetBeans = applyService.selectAllBudgetByApplyId(apply_id);
+    }
+
 }

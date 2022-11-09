@@ -25,9 +25,13 @@ public class Comment {
     public Comment(String comment_id, String weibo_id, String comment, String user_account, Date comment_date, String user_face_url) {
         This.comment_id = comment_id;
         This.weibo_id = weibo_id;
+        This.comment = comment;
     }
 
     public void setComment_date(Date comment_date) {
+    }
+
+    public String getComment() {
     }
 
 }

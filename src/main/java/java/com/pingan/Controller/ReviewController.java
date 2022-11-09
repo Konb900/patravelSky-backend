@@ -34,6 +34,7 @@ public class ReviewController {
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ModelAndView mv = new ModelAndView();
         HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
     }
 
 }
