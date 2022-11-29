@@ -59,4 +59,7 @@ public class Apply {
     public String getTrip_reason() {
     }
 
+    public void setApply_res(String apply_res) {
+    }
+
 }

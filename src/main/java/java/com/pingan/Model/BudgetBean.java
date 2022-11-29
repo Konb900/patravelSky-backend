@@ -26,4 +26,7 @@ public class BudgetBean {
     public String getBudget_class() {
     }
 
+    public String getBudget_info() {
+    }
+
 }

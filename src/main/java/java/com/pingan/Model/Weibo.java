@@ -38,4 +38,7 @@ public class Weibo {
         This.weibo_date = weibo_date;
     }
 
+    public void setUser_face_url(String user_face_url) {
+    }
+
 }

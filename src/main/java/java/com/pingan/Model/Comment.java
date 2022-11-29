@@ -34,4 +34,7 @@ public class Comment {
     public String getComment() {
     }
 
+    public String getComment_id() {
+    }
+
 }

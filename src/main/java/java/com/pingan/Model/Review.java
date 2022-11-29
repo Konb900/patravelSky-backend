@@ -27,4 +27,7 @@ public class Review {
     public String getApply_comment() {
     }
 
+    public void setApply_comment(String apply_comment) {
+    }
+
 }

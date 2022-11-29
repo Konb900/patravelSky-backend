@@ -38,4 +38,7 @@ public class Notification {
     public String getApply_id() {
     }
 
+    public String getMsg() {
+    }
+
 }

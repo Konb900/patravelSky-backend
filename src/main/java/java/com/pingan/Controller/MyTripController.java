@@ -42,6 +42,7 @@ public class MyTripController {
         String trip_time_end = new DateTransform();
         String trip_reason = request.getParameter("trip_reason");
         String trip_phonecall = request.getParameter("user_phonecall");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)

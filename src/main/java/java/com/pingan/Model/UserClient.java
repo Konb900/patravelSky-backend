@@ -38,4 +38,7 @@ public class UserClient {
     public String getUser_department() {
     }
 
+    public String getUser_role() {
+    }
+
 }
