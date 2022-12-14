@@ -24,4 +24,7 @@ public class UserClientService {
     public String selectUserIdByAccount(String user_account) {
     }
 
+    public Profile getUserProfile(String user_account) {
+    }
+
 }

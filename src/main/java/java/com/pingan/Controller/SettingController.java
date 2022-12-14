@@ -38,4 +38,11 @@ public class SettingController {
         UserClient uc;
     }
 
+    @RequestMapping
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        String user_id = (String) session.getAttribute("user_id");
+        UserClient uc;
+    }
+
 }

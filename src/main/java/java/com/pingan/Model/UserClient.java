@@ -41,4 +41,7 @@ public class UserClient {
     public String getUser_role() {
     }
 
+    public void setUser_password(String user_password) {
+    }
+
 }

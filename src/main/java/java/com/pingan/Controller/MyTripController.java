@@ -43,6 +43,7 @@ public class MyTripController {
         String trip_reason = request.getParameter("trip_reason");
         String trip_phonecall = request.getParameter("user_phonecall");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        IDworker iDworker = new IDworker(1);
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -52,6 +53,22 @@ public class MyTripController {
         String budget_info;
         String budget_class;
         float budget_price;
+        int budget_num;
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @ResponseBody
+    public String applyUpdate(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Date time_begin = null,time_end = null;
+        String user_name = request.getParameter("user_name");
+        String user_department = request.getParameter("user_department");
+        String user_apply_time = request.getParameter("user_apply_time");
+        String trip_destination = request.getParameter("trip_destination");
+        String trip_time_begin = new DateTransform();
+        String trip_time_end = new DateTransform();
+        String trip_reason = request.getParameter("trip_reason");
+        String trip_phonecall = request.getParameter("user_phonecall");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     }
 
 }

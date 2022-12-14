@@ -22,4 +22,7 @@ public class ApplyShort {
     public String getApply_id() {
     }
 
+    public String getApply_state() {
+    }
+
 }

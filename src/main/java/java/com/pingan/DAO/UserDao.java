@@ -27,4 +27,7 @@ public class UserDao {
     public List<UserClient> selectEmployee(String department) {
     }
 
+    public Profile getUserProfile(String user_account) {
+    }
+
 }

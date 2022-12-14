@@ -60,4 +60,8 @@ public class ApplyServiceImpl {
     public int insertBudget(BudgetBean budgetBean) {
     }
 
+    @Override
+    public Apply selectApplyByapplyId(String apply_id) {
+    }
+
 }

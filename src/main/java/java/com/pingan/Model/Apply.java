@@ -62,4 +62,10 @@ public class Apply {
     public void setApply_res(String apply_res) {
     }
 
+    public void setApply_state(String apply_state) {
+    }
+
+    public String getTrip_destination() {
+    }
+
 }

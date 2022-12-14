@@ -34,4 +34,7 @@ public class ApplyDao {
     public int insertApply(Apply apply) {
     }
 
+    public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
+    }
+
 }

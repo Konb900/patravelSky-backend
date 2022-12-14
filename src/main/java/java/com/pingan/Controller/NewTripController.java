@@ -25,6 +25,7 @@ public class NewTripController {
         ModelAndView mv = new ModelAndView();
         Apply apply = applyService.selectApplyByapplyId(apply_id);
         List<BudgetBean> budgetBeans = applyService.selectAllBudgetByApplyId(apply_id);
+        mv.addObject("apply", apply);
     }
 
 }

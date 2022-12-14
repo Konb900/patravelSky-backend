@@ -32,4 +32,7 @@ public class ApplyService {
     public int insertBudgets(List<Budget> list) {
     }
 
+    public int deleteBudgetByApplyId(String applyid) {
+    }
+
 }

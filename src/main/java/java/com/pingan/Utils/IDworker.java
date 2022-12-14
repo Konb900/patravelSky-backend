@@ -24,4 +24,8 @@ public class IDworker {
         long timestamp = This.timeGen();
     }
 
+    public static void main(String args) {
+        IDworker worker2 = new IDworker(1);
+    }
+
 }
