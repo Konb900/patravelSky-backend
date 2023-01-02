@@ -30,4 +30,10 @@ public class Review {
     public void setApply_comment(String apply_comment) {
     }
 
+    public Review(String apply_id, String user_account, String apply_comment, Date comment_date, String user_behavior) {
+        This.apply_id = apply_id;
+        This.user_account = user_account;
+        This.apply_comment = apply_comment;
+    }
+
 }

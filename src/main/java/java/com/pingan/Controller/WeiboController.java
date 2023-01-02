@@ -37,6 +37,7 @@ public class WeiboController {
         String user_id = (String) session.getAttribute("user_id");
         String content = request.getParameter("weibo_content");
         String date = new DateTransform();
+        Date weibo_date = Date.valueOf(date);
     }
 
     @RequestMapping(value = "/thumbOn", method = RequestMethod.POST)

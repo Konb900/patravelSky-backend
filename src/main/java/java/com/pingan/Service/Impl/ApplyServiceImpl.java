@@ -64,4 +64,8 @@ public class ApplyServiceImpl {
     public Apply selectApplyByapplyId(String apply_id) {
     }
 
+    @Override
+    public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
+    }
+
 }

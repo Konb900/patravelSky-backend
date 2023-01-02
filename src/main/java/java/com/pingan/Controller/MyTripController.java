@@ -44,6 +44,7 @@ public class MyTripController {
         String trip_phonecall = request.getParameter("user_phonecall");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         IDworker iDworker = new IDworker(1);
+        String apply_id = Long.toString(iDworker.nextId());
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -69,6 +70,7 @@ public class MyTripController {
         String trip_reason = request.getParameter("trip_reason");
         String trip_phonecall = request.getParameter("user_phonecall");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String apply_id = request.getParameter("apply_id");
     }
 
 }

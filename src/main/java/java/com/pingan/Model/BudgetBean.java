@@ -29,4 +29,10 @@ public class BudgetBean {
     public String getBudget_info() {
     }
 
+    public BudgetBean(String apply_id, String budget_info, String budget_class, java budget_price, java budget_num) {
+        This.apply_id = apply_id;
+        This.budget_info = budget_info;
+        This.budget_class = budget_class;
+    }
+
 }

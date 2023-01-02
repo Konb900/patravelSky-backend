@@ -28,6 +28,7 @@ public class SettingController {
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
         UserClient uc;
+        Profile profile;
     }
 
     @RequestMapping(value = "/password")
@@ -36,6 +37,7 @@ public class SettingController {
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
         UserClient uc;
+        Profile profile;
     }
 
     @RequestMapping

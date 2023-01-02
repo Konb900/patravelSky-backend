@@ -37,4 +37,7 @@ public class ApplyDao {
     public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
     }
 
+    public float getApplyMoney(String apply_id) {
+    }
+
 }

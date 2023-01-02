@@ -44,4 +44,8 @@ public class UserClient {
     public void setUser_password(String user_password) {
     }
 
+    @Override
+    public String toString() {
+    }
+
 }

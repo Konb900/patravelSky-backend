@@ -35,4 +35,7 @@ public class ApplyService {
     public int deleteBudgetByApplyId(String applyid) {
     }
 
+    public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
+    }
+
 }

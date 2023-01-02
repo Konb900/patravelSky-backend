@@ -37,4 +37,7 @@ public class Comment {
     public String getComment_id() {
     }
 
+    public void setWeibo_id(String weibo_id) {
+    }
+
 }

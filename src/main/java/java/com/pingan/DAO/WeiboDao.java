@@ -25,4 +25,7 @@ public class WeiboDao {
     public List<Comment> selectAllCommentByWeiboId(String weibo_id) {
     }
 
+    public Weibo selectWeiboById(String weibo_id) {
+    }
+
 }

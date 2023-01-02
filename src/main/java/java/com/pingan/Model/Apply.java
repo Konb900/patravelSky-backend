@@ -68,4 +68,7 @@ public class Apply {
     public String getTrip_destination() {
     }
 
+    public void setBudget_money(float budget_money) {
+    }
+
 }
