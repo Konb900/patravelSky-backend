@@ -45,6 +45,11 @@ public class SettingController {
         ModelAndView mv = new ModelAndView();
         String user_id = (String) session.getAttribute("user_id");
         UserClient uc;
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            mv.addObject("user", uc);
+        }
     }
 
 }

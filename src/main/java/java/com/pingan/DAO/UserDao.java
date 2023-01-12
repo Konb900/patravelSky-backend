@@ -30,4 +30,7 @@ public class UserDao {
     public Profile getUserProfile(String user_account) {
     }
 
+    public UserClient selectUserClientByAccount(String user_account) {
+    }
+
 }

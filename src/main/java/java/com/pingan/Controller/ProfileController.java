@@ -30,6 +30,7 @@ public class ProfileController {
         ModelAndView mv = new ModelAndView();
         HttpSession httpSession = request.getSession();
         String user_id = (String) httpSession.getAttribute("user_id");
+        Profile profile;
     }
 
 }

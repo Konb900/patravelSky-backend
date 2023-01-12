@@ -38,4 +38,7 @@ public class ApplyService {
     public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
     }
 
+    public float getApplyBudgetMoney(String apply_id) {
+    }
+
 }

@@ -27,4 +27,7 @@ public class UserClientService {
     public Profile getUserProfile(String user_account) {
     }
 
+    public boolean userFaceUrlUpload(String user_id, String url, String user_account) {
+    }
+
 }

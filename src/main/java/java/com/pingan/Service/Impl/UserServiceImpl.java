@@ -43,4 +43,8 @@ public class UserServiceImpl {
         int res2 = weiboDao.updateWeiboFaceUrl(user_account, url);
     }
 
+    @Override
+    public UserClient selectUserByAccount(String user_account) {
+    }
+
 }

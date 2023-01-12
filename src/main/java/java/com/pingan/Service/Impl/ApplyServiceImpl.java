@@ -30,6 +30,7 @@ public class ApplyServiceImpl {
             budget_num = Integer.parseInt(budget.budget_num);
             totle_budget += budget_price * budget_num;
         }
+        apply_id = list.get(0).apply_id;
     }
 
     @Override
@@ -66,6 +67,10 @@ public class ApplyServiceImpl {
 
     @Override
     public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
+    }
+
+    @Override
+    public String getApplyStateByApplyId(String id) {
     }
 
 }

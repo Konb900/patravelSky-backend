@@ -25,4 +25,7 @@ public class ApplyShort {
     public String getApply_state() {
     }
 
+    public void setApply_state(String apply_state) {
+    }
+
 }

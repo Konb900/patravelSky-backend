@@ -35,6 +35,24 @@ public class ReviewController {
         ModelAndView mv = new ModelAndView();
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
+        if (!user_id.equals("")) 
+        {
+            UserClient uc = userService.selectUserById(user_id);
+            List<ApplyShort> applyShorts = applyService.selectAllApplyShortByUserDepartment(uc.getUser_department());
+            mv.addObject("user", uc);
+            mv.addObject("applyShorts", applyShorts);
+        }
+    }
+
+    @RequestMapping(value = "/{apply_id}")
+    public ModelAndView applyReview(String apply_id, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        Apply apply = applyService.selectApplyByapplyId(apply_id);
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+        UserClient uc = userService.selectUserById(user_id);
+        List<BudgetBean> budgets = applyService.selectAllBudgetByApplyId(apply_id);
+        mv.addObject("user", uc);
     }
 
 }

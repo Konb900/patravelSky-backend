@@ -45,6 +45,7 @@ public class MyTripController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         IDworker iDworker = new IDworker(1);
         String apply_id = Long.toString(iDworker.nextId());
+        UserClient user = userService.selectUserByAccount(user_name);
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -55,6 +56,7 @@ public class MyTripController {
         String budget_class;
         float budget_price;
         int budget_num;
+        applyService.insertBudgets(budgets);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -71,6 +73,7 @@ public class MyTripController {
         String trip_phonecall = request.getParameter("user_phonecall");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String apply_id = request.getParameter("apply_id");
+        String apply_state = applyService.getApplyStateByApplyId(apply_id);
     }
 
 }

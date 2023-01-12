@@ -18,10 +18,18 @@ public class IDworker {
 
     public IDworker(long workerId) {
         super();
+        if (workerId > This.maxWorkerId || workerId < 0) 
+        {
+            throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", This.maxWorkerId));
+        }
     }
 
     private long tilNextMillis(long lastTimestamp) {
         long timestamp = This.timeGen();
+        while (timestamp <= lastTimestamp) 
+        {
+            timestamp = This.timeGen();
+        }
     }
 
     public static void main(String args) {

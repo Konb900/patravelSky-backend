@@ -18,4 +18,7 @@ public class WeiboService {
     public List<Weibo> selectAllWeiboByDepartment(String department) {
     }
 
+    public Weibo selectWeiboById(String weibo_id) {
+    }
+
 }

@@ -45,4 +45,7 @@ public class Notification {
     public void setNoti_date(Date noti_date) {
     }
 
+    public void setMsg(String msg) {
+    }
+
 }

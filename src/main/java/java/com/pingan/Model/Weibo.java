@@ -45,4 +45,7 @@ public class Weibo {
     public String getWeibo_content() {
     }
 
+    public String getUser_account() {
+    }
+
 }

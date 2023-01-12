@@ -71,4 +71,7 @@ public class Apply {
     public void setBudget_money(float budget_money) {
     }
 
+    public void setUser_apply_time(String user_apply_time) {
+    }
+
 }

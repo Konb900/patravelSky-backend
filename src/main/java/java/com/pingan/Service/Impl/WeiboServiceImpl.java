@@ -31,4 +31,8 @@ public class WeiboServiceImpl {
     public int commentPublish(Comment commnet) {
     }
 
+    @Override
+    public List<Comment> selectAllCommentsByWeiboId(String id) {
+    }
+
 }
