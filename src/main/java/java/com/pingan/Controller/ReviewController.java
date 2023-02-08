@@ -53,6 +53,7 @@ public class ReviewController {
         UserClient uc = userService.selectUserById(user_id);
         List<BudgetBean> budgets = applyService.selectAllBudgetByApplyId(apply_id);
         mv.addObject("user", uc);
+        mv.addObject("budgets", budgets);
     }
 
 }

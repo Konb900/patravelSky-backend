@@ -24,6 +24,7 @@ public class LoginController {
     public String login_query(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String user_account = request.getParameter("user_account");
         String user_password = request.getParameter("user_password");
+        UserClient user = userService.selectUserByAccount(user_account);
     }
 
 }

@@ -74,4 +74,10 @@ public class Apply {
     public void setUser_apply_time(String user_apply_time) {
     }
 
+    public String getUser_account() {
+    }
+
+    public String getUser_department() {
+    }
+
 }

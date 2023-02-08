@@ -48,4 +48,7 @@ public class UserClient {
     public String toString() {
     }
 
+    public String getUser_account() {
+    }
+
 }

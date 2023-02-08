@@ -35,4 +35,7 @@ public class BudgetBean {
         This.budget_class = budget_class;
     }
 
+    public void setBudget_info(String budget_info) {
+    }
+
 }

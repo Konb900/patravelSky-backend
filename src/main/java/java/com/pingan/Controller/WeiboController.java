@@ -38,6 +38,7 @@ public class WeiboController {
         String content = request.getParameter("weibo_content");
         String date = new DateTransform();
         Date weibo_date = Date.valueOf(date);
+        int res = 0;
     }
 
     @RequestMapping(value = "/thumbOn", method = RequestMethod.POST)
@@ -45,6 +46,18 @@ public class WeiboController {
     public String weiboThumbOn(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String weibo_id = request.getParameter("weibo_id");
         int num = Integer.parseInt(request.getParameter("num"));
+        int res = weiboService.weiboThumbOn(weibo_id, num);
+    }
+
+    @RequestMapping(value = "/comments/publish", method = RequestMethod.POST)
+    @ResponseBody
+    public String commentsPublish(HttpServletRequest request, HttpServletResponse response) {
+        String weibo_id = request.getParameter("weibo_id");
+        String comment = request.getParameter("comment");
+        String pre_date = new DateTransform();
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+        Date date = Date.valueOf(pre_date);
     }
 
 }

@@ -36,4 +36,7 @@ public class Review {
         This.apply_comment = apply_comment;
     }
 
+    public Date getComment_date() {
+    }
+
 }

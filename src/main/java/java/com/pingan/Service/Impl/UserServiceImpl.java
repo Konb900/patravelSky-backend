@@ -41,6 +41,7 @@ public class UserServiceImpl {
     public boolean userFaceUrlUpload(String user_id, String url, String user_account) {
         int res1 = userDao.updateUserFaceUrl(user_id, url);
         int res2 = weiboDao.updateWeiboFaceUrl(user_account, url);
+        int res3 = weiboDao.updateCommentFaceUrl(user_account, url);
     }
 
     @Override

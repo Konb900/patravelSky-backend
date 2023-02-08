@@ -19,6 +19,7 @@ public class Notification {
         This.user_account = user_account;
         This.noti_date = noti_date;
         This.msg = msg;
+        This.read_state = read_state;
     }
 
     public void setUser_id(String user_id) {
@@ -46,6 +47,9 @@ public class Notification {
     }
 
     public void setMsg(String msg) {
+    }
+
+    public String getUser_account() {
     }
 
 }

@@ -73,4 +73,8 @@ public class ApplyServiceImpl {
     public String getApplyStateByApplyId(String id) {
     }
 
+    @Override
+    public int deleteBudgetByApplyId(String apply_id) {
+    }
+
 }

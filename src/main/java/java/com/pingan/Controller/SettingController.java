@@ -29,6 +29,13 @@ public class SettingController {
         String user_id = (String) session.getAttribute("user_id");
         UserClient uc;
         Profile profile;
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            profile = userService.getUserProfile(uc.user_account);
+            mv.addObject("user", uc);
+            mv.addObject("profile", profile);
+        }
     }
 
     @RequestMapping(value = "/password")
@@ -38,6 +45,13 @@ public class SettingController {
         String user_id = (String) session.getAttribute("user_id");
         UserClient uc;
         Profile profile;
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            profile = userService.getUserProfile(uc.user_account);
+            mv.addObject("user", uc);
+            mv.addObject("profile", profile);
+        }
     }
 
     @RequestMapping

@@ -28,4 +28,7 @@ public class WeiboDao {
     public Weibo selectWeiboById(String weibo_id) {
     }
 
+    public int updateWeiboFaceUrl(String user_account, String user_face_url) {
+    }
+
 }

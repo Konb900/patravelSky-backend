@@ -41,4 +41,7 @@ public class ApplyService {
     public float getApplyBudgetMoney(String apply_id) {
     }
 
+    public String getApplyStateByApplyId(String id) {
+    }
+
 }

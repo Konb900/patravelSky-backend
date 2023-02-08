@@ -37,6 +37,7 @@ public class Weibo {
         This.weibo_content = weibo_content;
         This.weibo_date = weibo_date;
         This.thumb_on = thumb_on;
+        This.user_department = user_department;
     }
 
     public void setUser_face_url(String user_face_url) {
@@ -46,6 +47,9 @@ public class Weibo {
     }
 
     public String getUser_account() {
+    }
+
+    public void setThumb_on(Integer thumb_on) {
     }
 
 }
