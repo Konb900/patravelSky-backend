@@ -33,6 +33,7 @@ public class BudgetBean {
         This.apply_id = apply_id;
         This.budget_info = budget_info;
         This.budget_class = budget_class;
+        This.budget_price = budget_price;
     }
 
     public void setBudget_info(String budget_info) {

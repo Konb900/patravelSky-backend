@@ -52,4 +52,7 @@ public class Weibo {
     public void setThumb_on(Integer thumb_on) {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

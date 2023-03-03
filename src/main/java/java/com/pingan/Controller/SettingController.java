@@ -66,4 +66,13 @@ public class SettingController {
         }
     }
 
+    @RequestMapping(value = "/password/save", method = RequestMethod.POST)
+    @ResponseBody
+    public String save_password(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        String user_id = (String) session.getAttribute("user_id");
+        String password_new = request.getParameter("password_new");
+        String password_old = request.getParameter("password_old");
+        UserClient uc;
+    }
+
 }

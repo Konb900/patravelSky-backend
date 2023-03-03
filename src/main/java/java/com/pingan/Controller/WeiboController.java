@@ -58,6 +58,7 @@ public class WeiboController {
         HttpSession session = request.getSession();
         String user_id = (String) session.getAttribute("user_id");
         Date date = Date.valueOf(pre_date);
+        UserClient uc;
     }
 
 }

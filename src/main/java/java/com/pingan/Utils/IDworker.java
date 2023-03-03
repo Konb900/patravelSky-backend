@@ -36,4 +36,7 @@ public class IDworker {
         IDworker worker2 = new IDworker(1);
     }
 
+    private long timeGen() {
+    }
+
 }

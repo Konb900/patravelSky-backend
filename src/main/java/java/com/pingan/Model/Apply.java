@@ -80,4 +80,7 @@ public class Apply {
     public String getUser_department() {
     }
 
+    public Date getTrip_time_begin() {
+    }
+
 }

@@ -48,4 +48,8 @@ public class UserServiceImpl {
     public UserClient selectUserByAccount(String user_account) {
     }
 
+    @Override
+    public String selectUserIdByAccount(String user_account) {
+    }
+
 }

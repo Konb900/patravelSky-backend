@@ -44,4 +44,7 @@ public class Comment {
     public String getWeibo_id() {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

@@ -52,4 +52,7 @@ public class Notification {
     public String getUser_account() {
     }
 
+    public String getFrom() {
+    }
+
 }

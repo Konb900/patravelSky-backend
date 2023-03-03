@@ -47,6 +47,7 @@ public class MyTripController {
         String apply_id = Long.toString(iDworker.nextId());
         UserClient user = userService.selectUserByAccount(user_name);
         time_begin = Date.valueOf(trip_time_begin);
+        time_end = Date.valueOf(trip_time_end);
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -58,6 +59,15 @@ public class MyTripController {
         float budget_price;
         int budget_num;
         applyService.insertBudgets(budgets);
+        for (budgets : Budget budget){
+            apply_id = budget.apply_id;
+            budget_info = budget.budget_info;
+            budget_class = budget.budget_class;
+            budget_price = Float.parseFloat(budget.budget_price);
+            budget_num = Integer.parseInt(budget.budget_num);
+            BudgetBean budgetBean = new BudgetBean(apply_id, budget_info, budget_class, budget_price, budget_num);
+            applyService.insertBudget(budgetBean);
+        }
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -76,6 +86,19 @@ public class MyTripController {
         String apply_id = request.getParameter("apply_id");
         String apply_state = applyService.getApplyStateByApplyId(apply_id);
         UserClient user = userService.selectUserByAccount(user_name);
+        time_begin = Date.valueOf(trip_time_begin);
+    }
+
+    @RequestMapping
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+        if (!user_id.equals("")) 
+        {
+            List<ApplyShort> applyShorts = applyService.selectAllApplyShortByuserId(user_id);
+            mv.addObject("applyShorts", applyShorts);
+        }
     }
 
 }

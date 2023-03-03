@@ -30,4 +30,7 @@ public class UserClientService {
     public boolean userFaceUrlUpload(String user_id, String url, String user_account) {
     }
 
+    public List<UserClient> selectManager(String department) {
+    }
+
 }

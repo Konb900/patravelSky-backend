@@ -28,4 +28,7 @@ public class ApplyShort {
     public void setApply_state(String apply_state) {
     }
 
+    public void setApply_user(String apply_user) {
+    }
+
 }

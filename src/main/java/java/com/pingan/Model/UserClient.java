@@ -51,4 +51,7 @@ public class UserClient {
     public String getUser_account() {
     }
 
+    public String getUser_face_url() {
+    }
+
 }

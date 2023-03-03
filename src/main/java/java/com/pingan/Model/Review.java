@@ -34,6 +34,7 @@ public class Review {
         This.apply_id = apply_id;
         This.user_account = user_account;
         This.apply_comment = apply_comment;
+        This.comment_date = comment_date;
     }
 
     public Date getComment_date() {

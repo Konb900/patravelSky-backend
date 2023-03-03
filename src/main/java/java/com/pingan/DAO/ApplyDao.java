@@ -43,4 +43,7 @@ public class ApplyDao {
     public String getApplyRes(String apply_id) {
     }
 
+    public Apply selectApplyByapply_id(String apply_id) {
+    }
+
 }
