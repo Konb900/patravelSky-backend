@@ -27,6 +27,7 @@ public class Comment {
         This.weibo_id = weibo_id;
         This.comment = comment;
         This.user_account = user_account;
+        This.comment_date = comment_date;
     }
 
     public void setComment_date(Date comment_date) {
@@ -45,6 +46,9 @@ public class Comment {
     }
 
     public void setUser_account(String user_account) {
+    }
+
+    public String getUser_face_url() {
     }
 
 }

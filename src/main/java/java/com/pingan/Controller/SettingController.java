@@ -64,6 +64,7 @@ public class SettingController {
             uc = userService.selectUserById(user_id);
             mv.addObject("user", uc);
         }
+        mv.setViewName("setting");
     }
 
     @RequestMapping(value = "/password/save", method = RequestMethod.POST)
@@ -73,6 +74,16 @@ public class SettingController {
         String password_new = request.getParameter("password_new");
         String password_old = request.getParameter("password_old");
         UserClient uc;
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            if (!password_old.equals(uc.user_password)) 
+            {
+                return "password_error";
+            }
+            int res = userService.updateUserPassword(password_new, user_id);
+            return "success";
+        }
     }
 
 }

@@ -21,4 +21,7 @@ public class Profile {
     public String getPhone() {
     }
 
+    public String getDescription() {
+    }
+
 }

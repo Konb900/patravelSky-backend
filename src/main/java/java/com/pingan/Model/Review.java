@@ -40,4 +40,7 @@ public class Review {
     public Date getComment_date() {
     }
 
+    public String getUser_account() {
+    }
+
 }

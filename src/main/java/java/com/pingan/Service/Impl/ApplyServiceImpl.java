@@ -31,6 +31,7 @@ public class ApplyServiceImpl {
             totle_budget += budget_price * budget_num;
         }
         apply_id = list.get(0).apply_id;
+        int res = applyDao.updateApplyMoney(totle_budget, apply_id);
     }
 
     @Override
@@ -75,6 +76,15 @@ public class ApplyServiceImpl {
 
     @Override
     public int deleteBudgetByApplyId(String apply_id) {
+    }
+
+    @Override
+    public int sendApplyNotification(UserClient userClient, String apply_id) {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date = df.format(new Date());
+        java date_ = java.sql.Date.valueOf(date);
+        Notification notification = new Notification(userClient.user_id, userClient.user_account, date_, "", "unread", apply_id, "employee");
+        int res = notificationDao.insertNotification(notification);
     }
 
 }

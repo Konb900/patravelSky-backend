@@ -42,6 +42,7 @@ public class ReviewController {
             mv.addObject("user", uc);
             mv.addObject("applyShorts", applyShorts);
         }
+        mv.setViewName("applyReview");
     }
 
     @RequestMapping(value = "/{apply_id}")
@@ -54,6 +55,7 @@ public class ReviewController {
         List<BudgetBean> budgets = applyService.selectAllBudgetByApplyId(apply_id);
         mv.addObject("user", uc);
         mv.addObject("budgets", budgets);
+        mv.addObject("apply", apply);
     }
 
 }

@@ -54,4 +54,7 @@ public class UserClient {
     public String getUser_face_url() {
     }
 
+    public int getUser_score() {
+    }
+
 }

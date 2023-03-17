@@ -83,4 +83,7 @@ public class Apply {
     public Date getTrip_time_begin() {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

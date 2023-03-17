@@ -44,4 +44,7 @@ public class ApplyService {
     public String getApplyStateByApplyId(String id) {
     }
 
+    public String getApplyRes(String apply_id) {
+    }
+
 }

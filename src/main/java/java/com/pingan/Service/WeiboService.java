@@ -21,4 +21,7 @@ public class WeiboService {
     public Weibo selectWeiboById(String weibo_id) {
     }
 
+    public int weiboThumbOn(String weibo_id, int num) {
+    }
+
 }

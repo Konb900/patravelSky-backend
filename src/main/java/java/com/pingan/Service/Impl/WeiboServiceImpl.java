@@ -36,4 +36,9 @@ public class WeiboServiceImpl {
     public List<Comment> selectAllCommentsByWeiboId(String id) {
     }
 
+    @Override
+    public int weiboPublish(Weibo weibo) {
+        int res = weiboDao.weiboPublish(weibo);
+    }
+
 }
