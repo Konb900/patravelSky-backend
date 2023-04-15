@@ -52,4 +52,9 @@ public class UserServiceImpl {
     public String selectUserIdByAccount(String user_account) {
     }
 
+    @Override
+    public int saveUserProfile(String user_account, String description, String phone) {
+        int res = userDao.updateUserProfile(user_account, description, phone);
+    }
+
 }

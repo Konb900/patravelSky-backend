@@ -49,6 +49,7 @@ public class MyTripController {
         time_begin = Date.valueOf(trip_time_begin);
         time_end = Date.valueOf(trip_time_end);
         Apply apply = new Apply(apply_id, user.getUser_id(), user_apply_time, user_name, user_department, trip_destination, time_begin, time_end, trip_reason, trip_phonecall, "待审批");
+        long res = applyService.insertApplyInfo(apply);
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -69,6 +70,7 @@ public class MyTripController {
             BudgetBean budgetBean = new BudgetBean(apply_id, budget_info, budget_class, budget_price, budget_num);
             applyService.insertBudget(budgetBean);
         }
+        int res = applyService.caculateApplyBudget(budgets);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -89,6 +91,7 @@ public class MyTripController {
         UserClient user = userService.selectUserByAccount(user_name);
         time_begin = Date.valueOf(trip_time_begin);
         time_end = Date.valueOf(trip_time_end);
+        Apply apply = new Apply(apply_id, user.getUser_id(), user_apply_time, user_name, user_department, trip_destination, time_begin, time_end, trip_reason, trip_phonecall, apply_state);
     }
 
     @RequestMapping

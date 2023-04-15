@@ -36,6 +36,7 @@ public class SettingController {
             mv.addObject("user", uc);
             mv.addObject("profile", profile);
         }
+        mv.setViewName("setting_profile");
     }
 
     @RequestMapping(value = "/password")
@@ -52,6 +53,7 @@ public class SettingController {
             mv.addObject("user", uc);
             mv.addObject("profile", profile);
         }
+        mv.setViewName("setting_password");
     }
 
     @RequestMapping

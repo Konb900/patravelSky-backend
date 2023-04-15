@@ -27,6 +27,7 @@ public class NewTripController {
         List<BudgetBean> budgetBeans = applyService.selectAllBudgetByApplyId(apply_id);
         mv.addObject("apply", apply);
         mv.addObject("budgetBeans", budgetBeans);
+        mv.setViewName("apply_put");
     }
 
 }

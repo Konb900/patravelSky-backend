@@ -31,4 +31,7 @@ public class ApplyShort {
     public void setApply_user(String apply_user) {
     }
 
+    public void setApply_id(String apply_id) {
+    }
+
 }

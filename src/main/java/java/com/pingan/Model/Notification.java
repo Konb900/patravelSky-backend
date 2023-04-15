@@ -20,6 +20,7 @@ public class Notification {
         This.noti_date = noti_date;
         This.msg = msg;
         This.read_state = read_state;
+        This.apply_id = apply_id;
     }
 
     public void setUser_id(String user_id) {
@@ -53,6 +54,9 @@ public class Notification {
     }
 
     public String getFrom() {
+    }
+
+    public Date getNoti_date() {
     }
 
 }

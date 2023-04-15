@@ -36,4 +36,7 @@ public class UserDao {
     public String selectUserClientIdByAccount(String user_account) {
     }
 
+    public UserClient selectUserClientById(String user_id) {
+    }
+
 }

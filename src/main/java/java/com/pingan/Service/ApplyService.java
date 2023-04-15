@@ -47,4 +47,7 @@ public class ApplyService {
     public String getApplyRes(String apply_id) {
     }
 
+    public List<ApplyShort> selectAllApplyShortByuserId(String user_id) {
+    }
+
 }

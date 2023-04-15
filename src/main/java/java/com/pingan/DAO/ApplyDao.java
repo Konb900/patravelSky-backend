@@ -46,4 +46,7 @@ public class ApplyDao {
     public Apply selectApplyByapply_id(String apply_id) {
     }
 
+    public int updateApplyMoney(java money, String apply_id) {
+    }
+
 }

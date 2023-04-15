@@ -33,4 +33,7 @@ public class UserClientService {
     public List<UserClient> selectManager(String department) {
     }
 
+    public boolean userClientLoginCheck(String user_account, String user_password) {
+    }
+
 }

@@ -57,4 +57,7 @@ public class UserClient {
     public int getUser_score() {
     }
 
+    public String getUser_password() {
+    }
+
 }

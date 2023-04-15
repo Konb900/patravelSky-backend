@@ -87,4 +87,8 @@ public class ApplyServiceImpl {
         int res = notificationDao.insertNotification(notification);
     }
 
+    @Override
+    public int updateApplyInfo(Apply apply) {
+    }
+
 }

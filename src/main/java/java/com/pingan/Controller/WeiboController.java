@@ -39,6 +39,14 @@ public class WeiboController {
         String date = new DateTransform();
         Date weibo_date = Date.valueOf(date);
         int res = 0;
+        if (!user_id.equals("")) 
+        {
+            UserClient uc = userService.selectUserById(user_id);
+            IDworker iDworker = new IDworker(1);
+            String weibo_id = Long.toString(iDworker.nextId());
+            Weibo weibo = new Weibo(weibo_id, content, uc.user_account, weibo_date, 0, uc.user_department, "/resources/image/profile-full-male.png");
+            res = weiboService.weiboPublish(weibo);
+        }
     }
 
     @RequestMapping(value = "/thumbOn", method = RequestMethod.POST)
@@ -59,6 +67,14 @@ public class WeiboController {
         String user_id = (String) session.getAttribute("user_id");
         Date date = Date.valueOf(pre_date);
         UserClient uc;
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            IDworker iDworker = new IDworker(1);
+            String comment_id = Long.toString(iDworker.nextId());
+            Comment comment1 = new Comment(comment_id, weibo_id, comment, uc.user_account, date, "/resources/image/profile-full-male.png");
+            int res = weiboService.commentPublish(comment1);
+        }
     }
 
 }

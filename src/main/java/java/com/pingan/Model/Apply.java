@@ -86,4 +86,19 @@ public class Apply {
     public void setUser_account(String user_account) {
     }
 
+    public Apply(String apply_id, String user_id, String user_apply_time, String user_account, String user_department, String trip_destination, Date trip_time_begin, Date trip_time_end, String trip_reason, String trip_phonecall, String apply_state) {
+        This.apply_id = apply_id;
+        This.user_id = user_id;
+        This.user_apply_time = user_apply_time;
+        This.user_account = user_account;
+        This.user_department = user_department;
+        This.trip_destination = trip_destination;
+        This.trip_time_begin = trip_time_begin;
+        This.trip_time_end = trip_time_end;
+        This.trip_reason = trip_reason;
+    }
+
+    public void setApply_id(String apply_id) {
+    }
+
 }
