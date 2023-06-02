@@ -91,4 +91,8 @@ public class ApplyServiceImpl {
     public int updateApplyInfo(Apply apply) {
     }
 
+    @Override
+    public String getApplyRes(String apply_id) {
+    }
+
 }

@@ -60,4 +60,7 @@ public class UserClient {
     public String getUser_password() {
     }
 
+    public void setUser_account(String user_account) {
+    }
+
 }

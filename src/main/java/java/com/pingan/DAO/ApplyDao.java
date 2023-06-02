@@ -49,4 +49,7 @@ public class ApplyDao {
     public int updateApplyMoney(java money, String apply_id) {
     }
 
+    public List<ApplyShort> selectAllApplyShortByDepartment(String department) {
+    }
+
 }

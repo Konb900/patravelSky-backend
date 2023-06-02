@@ -43,4 +43,7 @@ public class Review {
     public String getUser_account() {
     }
 
+    public String getUser_behavior() {
+    }
+
 }

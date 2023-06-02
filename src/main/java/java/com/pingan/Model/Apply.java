@@ -96,9 +96,13 @@ public class Apply {
         This.trip_time_begin = trip_time_begin;
         This.trip_time_end = trip_time_end;
         This.trip_reason = trip_reason;
+        This.trip_phonecall = trip_phonecall;
     }
 
     public void setApply_id(String apply_id) {
+    }
+
+    public void setTrip_destination(String trip_destination) {
     }
 
 }

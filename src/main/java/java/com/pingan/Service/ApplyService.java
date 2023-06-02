@@ -50,4 +50,7 @@ public class ApplyService {
     public List<ApplyShort> selectAllApplyShortByuserId(String user_id) {
     }
 
+    public int updateApplyInfo(Apply apply) {
+    }
+
 }

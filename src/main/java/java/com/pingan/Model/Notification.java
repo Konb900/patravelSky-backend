@@ -59,4 +59,7 @@ public class Notification {
     public Date getNoti_date() {
     }
 
+    public void setRead_state(String read_state) {
+    }
+
 }

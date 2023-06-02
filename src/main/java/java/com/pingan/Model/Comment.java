@@ -51,4 +51,7 @@ public class Comment {
     public String getUser_face_url() {
     }
 
+    public void setUser_face_url(String user_face_url) {
+    }
+
 }

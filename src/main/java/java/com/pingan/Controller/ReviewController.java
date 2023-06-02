@@ -56,6 +56,7 @@ public class ReviewController {
         mv.addObject("user", uc);
         mv.addObject("budgets", budgets);
         mv.addObject("apply", apply);
+        mv.setViewName("reviewInfo");
     }
 
 }

@@ -42,4 +42,7 @@ public class BudgetBean {
     public void setBudget_price(float budget_price) {
     }
 
+    public void setApply_id(String apply_id) {
+    }
+
 }

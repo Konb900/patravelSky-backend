@@ -59,4 +59,7 @@ public class Weibo {
     public Date getWeibo_date() {
     }
 
+    public String getUser_department() {
+    }
+
 }
