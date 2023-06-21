@@ -47,6 +47,7 @@ public class WeiboController {
             Weibo weibo = new Weibo(weibo_id, content, uc.user_account, weibo_date, 0, uc.user_department, "/resources/image/profile-full-male.png");
             res = weiboService.weiboPublish(weibo);
         }
+        return "success";
     }
 
     @RequestMapping(value = "/thumbOn", method = RequestMethod.POST)
@@ -55,6 +56,7 @@ public class WeiboController {
         String weibo_id = request.getParameter("weibo_id");
         int num = Integer.parseInt(request.getParameter("num"));
         int res = weiboService.weiboThumbOn(weibo_id, num);
+        return "success";
     }
 
     @RequestMapping(value = "/comments/publish", method = RequestMethod.POST)
@@ -75,6 +77,22 @@ public class WeiboController {
             Comment comment1 = new Comment(comment_id, weibo_id, comment, uc.user_account, date, "/resources/image/profile-full-male.png");
             int res = weiboService.commentPublish(comment1);
         }
+        return "success";
+    }
+
+    @RequestMapping(value = "/comments", method = RequestMethod.POST)
+    @ResponseBody
+    public void loadComments(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String weibo_id = request.getParameter("weibo_id");
+        ObjectMapper mapper = new ObjectMapper();
+        List<Comment> list = weiboService.selectAllCommentsByWeiboId(weibo_id);
+        String json = mapper.writeValueAsString(list);
+        System.out.println(json);
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html");
+        PrintWriter printWriter = response.getWriter();
+        printWriter.print(json);
+        printWriter.flush();
     }
 
 }

@@ -25,6 +25,21 @@ public class LoginController {
         String user_account = request.getParameter("user_account");
         String user_password = request.getParameter("user_password");
         UserClient user = userService.selectUserByAccount(user_account);
+        if (user != null) 
+        {
+            if (!user_password.equals(user.user_password)) 
+            {
+                return "error";
+            }
+            return "success";
+        }
+    }
+
+    @RequestMapping
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login");
+        return mv;
     }
 
 }

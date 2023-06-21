@@ -43,6 +43,7 @@ public class ReviewController {
             mv.addObject("applyShorts", applyShorts);
         }
         mv.setViewName("applyReview");
+        return mv;
     }
 
     @RequestMapping(value = "/{apply_id}")
@@ -57,6 +58,29 @@ public class ReviewController {
         mv.addObject("budgets", budgets);
         mv.addObject("apply", apply);
         mv.setViewName("reviewInfo");
+        return mv;
+    }
+
+    @RequestMapping(value = "/commit/{apply_id}", method = RequestMethod.POST)
+    @ResponseBody
+    public String makeReview(String apply_id, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        UserClient uc;
+        DateTransform dateTransform = new DateTransform();
+        String review_comment = request.getParameter("review_comment");
+        String review = request.getParameter("review");
+        String review_date = dateTransform.date_transform_(request.getParameter("review_date"));
+        HttpSession session = request.getSession();
+        String user_id = (String) session.getAttribute("user_id");
+        Date reviewDate = Date.valueOf(review_date);
+        if (!user_id.equals("")) 
+        {
+            uc = userService.selectUserById(user_id);
+            Review review1 = new Review(apply_id, uc.user_account, review_comment, reviewDate, "审批");
+            int res = reviewService.makeReview(review1);
+            int res1 = applyService.updateApplyState(review, apply_id);
+            return "success";
+        }
+        return "error";
     }
 
 }

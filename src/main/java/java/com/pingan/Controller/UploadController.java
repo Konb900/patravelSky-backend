@@ -26,4 +26,31 @@ import java.util.Date;
 public class UploadController { 
     public UserClientService userService;
 
+    @RequestMapping(value = "upload", method = RequestMethod.POST)
+    @ResponseBody
+    public String upload(HttpServletRequest request, HttpServletResponse response, ModelMap model, HttpSession session) throws IOException {
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        MultipartFile mFile = multipartRequest.getFile("file");
+        String user_id = (String) session.getAttribute("user_id");
+        String path = request.getSession().getServletContext().getRealPath("/resources/upload");
+        String filename = mFile.getOriginalFilename();
+        InputStream inputStream = mFile.getInputStream();
+        UserClient uc = userService.selectUserById(user_id);
+        byte b = new byte[];
+        int length = inputStream.read(b);
+        Date date = new Date();
+        SimpleDateFormat F = new SimpleDateFormat("yyyyMMddHHmmss");
+        String prefix = filename.substring(filename.lastIndexOf("."));
+        filename = "123" + F.format(date) + prefix;
+        String url = path + "/" + filename;
+        System.out.println(url);
+        FileOutputStream outputStream = new FileOutputStream(url);
+        outputStream.write(b, 0, length);
+        inputStream.close();
+        outputStream.close();
+        String url2 = "/BusinessTrip/resources/upload/" + filename;
+        boolean res = userService.userFaceUrlUpload(user_id, url2, uc.user_account);
+        return "success";
+    }
+
 }

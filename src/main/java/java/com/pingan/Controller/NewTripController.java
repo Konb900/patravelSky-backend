@@ -28,6 +28,14 @@ public class NewTripController {
         mv.addObject("apply", apply);
         mv.addObject("budgetBeans", budgetBeans);
         mv.setViewName("apply_put");
+        return mv;
+    }
+
+    @RequestMapping
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("new");
+        return mv;
     }
 
 }

@@ -39,4 +39,7 @@ public class UserDao {
     public UserClient selectUserClientById(String user_id) {
     }
 
+    public UserClient login(UserClient userClient) {
+    }
+
 }

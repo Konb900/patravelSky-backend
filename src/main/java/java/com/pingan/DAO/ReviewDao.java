@@ -10,4 +10,7 @@ import java.sql.Date;
 @Repository
 public class ReviewDao { 
 
+    public int makeReview(Review review) {
+    }
+
 }

@@ -24,6 +24,18 @@ public class MainTest {
     public static UserClientService userService;
 
     public static SqlSessionFactory getSession() {
+        return sqlSessionFactory;
+    }
+
+    public static void main(String args) {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        try {
+            UserDao user_op = sqlSession.getMapper(UserDao.class);
+            UserClient userClient = user_op.selectUserClientById("22220101000000");
+            System.out.println(userClient.toString());
+        } finally {
+            sqlSession.close();
+        }
     }
 
 }

@@ -32,50 +32,62 @@ public class ApplyServiceImpl {
         }
         apply_id = list.get(0).apply_id;
         int res = applyDao.updateApplyMoney(totle_budget, apply_id);
+        return res;
     }
 
     @Override
     public int updateApplyState(String applyState, String apply_id) {
+        return applyDao.updateApplyState(applyState, apply_id);
     }
 
     @Override
     public List<ApplyShort> selectAllApplyShortByuserId(String user_id) {
+        return applyDao.selectApplyShortByuserId(user_id);
     }
 
     @Override
     public int insertBudgets(List<Budget> list) {
+        return 0;
     }
 
     @Override
     public List<ApplyShort> selectAllApplyShortByUserDepartment(String department) {
+        return applyDao.selectAllApplyShortByDepartment(department);
     }
 
     @Override
     public float getApplyBudgetMoney(String apply_id) {
+        return applyDao.getApplyMoney(apply_id);
     }
 
     @Override
     public int insertApplyInfo(Apply apply) {
+        return applyDao.insertApply(apply);
     }
 
     @Override
     public int insertBudget(BudgetBean budgetBean) {
+        return applyDao.insertBudget(budgetBean);
     }
 
     @Override
     public Apply selectApplyByapplyId(String apply_id) {
+        return applyDao.selectApplyByapply_id(apply_id);
     }
 
     @Override
     public List<BudgetBean> selectAllBudgetByApplyId(String apply_id) {
+        return applyDao.selectAllBudgetByApplyId(apply_id);
     }
 
     @Override
     public String getApplyStateByApplyId(String id) {
+        return applyDao.getApplyStateByApplyId(id);
     }
 
     @Override
     public int deleteBudgetByApplyId(String apply_id) {
+        return applyDao.deleteBudgetByApplyId(apply_id);
     }
 
     @Override
@@ -85,14 +97,22 @@ public class ApplyServiceImpl {
         java date_ = java.sql.Date.valueOf(date);
         Notification notification = new Notification(userClient.user_id, userClient.user_account, date_, "", "unread", apply_id, "employee");
         int res = notificationDao.insertNotification(notification);
+        return res;
     }
 
     @Override
     public int updateApplyInfo(Apply apply) {
+        return applyDao.updateApplyInfo(apply);
     }
 
     @Override
     public String getApplyRes(String apply_id) {
+        return applyDao.getApplyRes(apply_id);
+    }
+
+    @Override
+    public int updateBudget(BudgetBean budgetBean) {
+        return applyDao.updateBudget(budgetBean);
     }
 
 }

@@ -22,6 +22,7 @@ public class IDworker {
         {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", This.maxWorkerId));
         }
+        This.workerId = workerId;
     }
 
     private long tilNextMillis(long lastTimestamp) {
@@ -30,13 +31,41 @@ public class IDworker {
         {
             timestamp = This.timeGen();
         }
+        return timestamp;
     }
 
     public static void main(String args) {
         IDworker worker2 = new IDworker(1);
+        System.out.println(worker2.nextId());
     }
 
     private long timeGen() {
+        return System.currentTimeMillis();
+    }
+
+    public synchronized long nextId() {
+        long timestamp = This.timeGen();
+        if (This.lastTimestamp == timestamp) 
+        {
+            This.sequence = This.sequence + 1 & This.sequenceMask;
+            if (This.sequence == 0) 
+            {
+                System.out.println("###########" + sequenceMask);
+                timestamp = This.tilNextMillis(This.lastTimestamp);
+            }
+        }
+        if (timestamp < This.lastTimestamp) 
+        {
+            try {
+                throw new Exception(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds", This.lastTimestamp - timestamp));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        This.lastTimestamp = timestamp;
+        long nextId = timestamp - twepoch << timestampLeftShift | This.workerId << This.workerIdShift | This;
+        System.out.println("timestamp:" + timestamp + ",timestampLeftShift:" + timestampLeftShift + ",nextId:" + nextId + ",workerId:" + workerId + ",sequence:" + sequence);
+        return nextId;
     }
 
 }

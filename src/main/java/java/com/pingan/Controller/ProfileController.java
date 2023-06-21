@@ -35,6 +35,23 @@ public class ProfileController {
         {
             mv.setViewName("login");
         }
+        return mv;
+    }
+
+    @RequestMapping(value = "/{user_id}")
+    public ModelAndView index2(String user_id, HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView mv = new ModelAndView();
+        HttpSession httpSession = request.getSession();
+        Profile profile;
+        UserClient user = service.selectUserById(user_id);
+        profile = service.getUserProfile(user.user_account);
+        List<Weibo> records = weiboService.selectAllWeiboByDepartment(user.user_department);
+        mv.addObject("profile", profile);
+        mv.addObject("weibo_list", records);
+        mv.addObject("user", user);
+        mv.setViewName("profile");
+        mv.addObject("visitor", "guest");
+        return mv;
     }
 
 }

@@ -8,4 +8,7 @@ import java.com.pingan.Model.Review;
  */
 public class ReviewService { 
 
+    public int makeReview(Review review) {
+    }
+
 }

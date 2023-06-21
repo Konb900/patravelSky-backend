@@ -36,4 +36,7 @@ public class UserClientService {
     public boolean userClientLoginCheck(String user_account, String user_password) {
     }
 
+    public int updateUserPassword(String password_new, String user_id) {
+    }
+
 }

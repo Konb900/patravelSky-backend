@@ -37,6 +37,7 @@ public class SettingController {
             mv.addObject("profile", profile);
         }
         mv.setViewName("setting_profile");
+        return mv;
     }
 
     @RequestMapping(value = "/password")
@@ -54,6 +55,7 @@ public class SettingController {
             mv.addObject("profile", profile);
         }
         mv.setViewName("setting_password");
+        return mv;
     }
 
     @RequestMapping
@@ -67,6 +69,7 @@ public class SettingController {
             mv.addObject("user", uc);
         }
         mv.setViewName("setting");
+        return mv;
     }
 
     @RequestMapping(value = "/password/save", method = RequestMethod.POST)
@@ -86,6 +89,23 @@ public class SettingController {
             int res = userService.updateUserPassword(password_new, user_id);
             return "success";
         }
+        return "error";
+    }
+
+    @RequestMapping(value = "/profile/save", method = RequestMethod.POST)
+    @ResponseBody
+    public String saveProfile(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
+        String user_id = (String) session.getAttribute("user_id");
+        String phone = request.getParameter("phone");
+        String description = request.getParameter("description");
+        UserClient uc = userService.selectUserById(user_id);
+        String user_account = uc.user_account;
+        int res = userService.saveUserProfile(user_account, description, phone);
+        if (res > 0) 
+        {
+            return "success";
+        }
+        return "error";
     }
 
 }

@@ -24,4 +24,7 @@ public class WeiboService {
     public int weiboThumbOn(String weibo_id, int num) {
     }
 
+    public int commentPublish(Comment commnet) {
+    }
+
 }

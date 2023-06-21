@@ -52,4 +52,7 @@ public class ApplyDao {
     public List<ApplyShort> selectAllApplyShortByDepartment(String department) {
     }
 
+    public int insertBudget(BudgetBean budgetBean) {
+    }
+
 }

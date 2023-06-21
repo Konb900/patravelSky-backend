@@ -25,6 +25,24 @@ public class HelloController {
         String user_account = request.getParameter("user_account");
         String user_password = request.getParameter("user_password");
         UserClient user = userService.selectUserByAccount(user_account);
+        if (user != null) 
+        {
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("user_id", user.getUser_id());
+            String sessionId = httpSession.getId();
+            if (httpSession.isNew()) 
+            {
+                System.out.println("session创建成功" + sessionId);
+            }
+            return "success";
+        }
+    }
+
+    @RequestMapping
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login");
+        return mv;
     }
 
 }

@@ -53,4 +53,7 @@ public class ApplyService {
     public int updateApplyInfo(Apply apply) {
     }
 
+    public int updateBudget(BudgetBean budgetBean) {
+    }
+
 }

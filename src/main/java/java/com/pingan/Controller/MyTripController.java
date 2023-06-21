@@ -51,6 +51,10 @@ public class MyTripController {
         Apply apply = new Apply(apply_id, user.getUser_id(), user_apply_time, user_name, user_department, trip_destination, time_begin, time_end, trip_reason, trip_phonecall, "待审批");
         long res = applyService.insertApplyInfo(apply);
         int res2 = applyService.sendApplyNotification(user, apply_id);
+        if (res == 1) 
+        {
+            return apply_id;
+        }
     }
 
     @RequestMapping(value = "/addBudget", method = RequestMethod.POST)
@@ -72,6 +76,7 @@ public class MyTripController {
             applyService.insertBudget(budgetBean);
         }
         int res = applyService.caculateApplyBudget(budgets);
+        return "success";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -94,6 +99,10 @@ public class MyTripController {
         time_end = Date.valueOf(trip_time_end);
         Apply apply = new Apply(apply_id, user.getUser_id(), user_apply_time, user_name, user_department, trip_destination, time_begin, time_end, trip_reason, trip_phonecall, apply_state);
         int res = applyService.updateApplyInfo(apply);
+        if (res == 1) 
+        {
+            return apply_id;
+        }
     }
 
     @RequestMapping
@@ -107,6 +116,30 @@ public class MyTripController {
             mv.addObject("applyShorts", applyShorts);
         }
         mv.setViewName("mytrip");
+        return mv;
+    }
+
+    @RequestMapping(value = "/updateBudget", method = RequestMethod.POST)
+    @ResponseBody
+    public String updateBudget(List<Budget> budgets) throws IOException {
+        String apply_id;
+        String budget_info;
+        String budget_class;
+        float budget_price;
+        int budget_num;
+        apply_id = budgets.get(0).apply_id;
+        int res = applyService.deleteBudgetByApplyId(apply_id);
+        for (budgets : Budget budget){
+            apply_id = budget.apply_id;
+            budget_info = budget.budget_info;
+            budget_class = budget.budget_class;
+            budget_price = Float.parseFloat(budget.budget_price);
+            budget_num = Integer.parseInt(budget.budget_num);
+            BudgetBean budgetBean = new BudgetBean(apply_id, budget_info, budget_class, budget_price, budget_num);
+            applyService.insertBudget(budgetBean);
+        }
+        int res2 = applyService.caculateApplyBudget(budgets);
+        return "success";
     }
 
 }

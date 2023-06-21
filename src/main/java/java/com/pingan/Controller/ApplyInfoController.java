@@ -19,4 +19,18 @@ import org.springframework.stereotype.Controller;
 public class ApplyInfoController { 
     private ApplyService applyService;
 
+    @RequestMapping(value = "/{apply_id}")
+    public ModelAndView index(String apply_id) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        Apply apply = applyService.selectApplyByapplyId(apply_id);
+        List<BudgetBean> budgetBeans = applyService.selectAllBudgetByApplyId(apply_id);
+        apply.budget_money = applyService.getApplyBudgetMoney(apply_id);
+        apply.apply_state = applyService.getApplyStateByApplyId(apply_id);
+        apply.apply_res = applyService.getApplyRes(apply_id);
+        mv.addObject("apply", apply);
+        mv.addObject("budgets", budgetBeans);
+        mv.setViewName("applyInfo");
+        return mv;
+    }
+
 }

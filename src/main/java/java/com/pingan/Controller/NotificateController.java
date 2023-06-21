@@ -14,4 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/notification")
 public class NotificateController { 
 
+    @RequestMapping
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("notification");
+        return mv;
+    }
+
 }

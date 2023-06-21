@@ -19,6 +19,7 @@ public class WeiboServiceImpl {
 
     @Override
     public Weibo selectWeiboById(String weibo_id) {
+        return weiboDao.selectWeiboById(weibo_id);
     }
 
     @Override
@@ -26,19 +27,28 @@ public class WeiboServiceImpl {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("weibo_id", weibo_id);
         map.put("num", num);
+        return weiboDao.weiboThumbOn(map);
     }
 
     @Override
     public int commentPublish(Comment commnet) {
+        return weiboDao.insertComment(commnet);
     }
 
     @Override
     public List<Comment> selectAllCommentsByWeiboId(String id) {
+        return weiboDao.selectAllCommentByWeiboId(id);
     }
 
     @Override
     public int weiboPublish(Weibo weibo) {
         int res = weiboDao.weiboPublish(weibo);
+        return res;
+    }
+
+    @Override
+    public List<Weibo> selectAllWeiboByDepartment(String department) {
+        return weiboDao.selectAllWeiboByDepartment(department);
     }
 
 }

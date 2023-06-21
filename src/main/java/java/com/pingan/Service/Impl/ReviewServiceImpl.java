@@ -14,4 +14,9 @@ import java.sql.Date;
 public class ReviewServiceImpl { 
     private ReviewDao reviewDao;
 
+    @Override
+    public int makeReview(Review review) {
+        return reviewDao.makeReview(review);
+    }
+
 }

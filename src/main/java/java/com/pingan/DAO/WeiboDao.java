@@ -34,4 +34,7 @@ public class WeiboDao {
     public int insertComment(Comment comment) {
     }
 
+    public int weiboThumbOn(Map<String, Object> map) {
+    }
+
 }

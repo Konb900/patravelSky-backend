@@ -19,22 +19,27 @@ public class UserServiceImpl {
 
     @Override
     public List<UserClient> selectManager(String department) {
+        return userDao.selectManager(department);
     }
 
     @Override
     public List<UserClient> selectEmployee(String department) {
+        return userDao.selectEmployee(department);
     }
 
     @Override
     public int updateUserPassword(String password_new, String user_id) {
+        return userDao.updateUserPassword(user_id, password_new);
     }
 
     @Override
     public Profile getUserProfile(String user_account) {
+        return userDao.getUserProfile(user_account);
     }
 
     @Override
     public UserClient selectUserById(String user_id) {
+        return userDao.selectUserClientById(user_id);
     }
 
     @Override
@@ -42,19 +47,28 @@ public class UserServiceImpl {
         int res1 = userDao.updateUserFaceUrl(user_id, url);
         int res2 = weiboDao.updateWeiboFaceUrl(user_account, url);
         int res3 = weiboDao.updateCommentFaceUrl(user_account, url);
+        return true;
     }
 
     @Override
     public UserClient selectUserByAccount(String user_account) {
+        return userDao.selectUserClientByAccount(user_account);
     }
 
     @Override
     public String selectUserIdByAccount(String user_account) {
+        return null;
     }
 
     @Override
     public int saveUserProfile(String user_account, String description, String phone) {
         int res = userDao.updateUserProfile(user_account, description, phone);
+        return res;
+    }
+
+    @Override
+    public boolean userClientLoginCheck(String user_account, String user_password) {
+        return false;
     }
 
 }
